@@ -2,7 +2,7 @@ exports.run = (client, msg, args) => {
 
     let code = args.join(" ").slice(1);
 
-    if(msg.author.id !== "327864603788967948") return;
+    if(msg.author.id !== "266394141947199491") return;
     try {
         const code = args.join(" ");
         let evaled = eval(code);
