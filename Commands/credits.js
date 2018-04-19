@@ -5,7 +5,7 @@ msg.channel.send({embed: {
       name: client.user.username + " Credits",
       icon_url: client.user.avatarURL
     },
-    description: "Author of the bot: **ZXByte#8075**",
+    description: "Author of the bot: **BriciWorld#1434**",
       fields: [{
         name: ":tools: Contribuitors",
         value: "There are no contribuitors for this bot. If you want to be on this list just contribute to this bot on GitHub."

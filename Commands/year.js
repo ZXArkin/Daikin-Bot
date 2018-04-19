@@ -1,10 +1,5 @@
 exports.run = (client, msg, args) => {
-    let text = args.join(" ");
-    msg.channel.send({embed: {
-        color: 0x194596,
-        description: `${text}`,
-          }
-    });
+    msg.channel.send(`:calendar_spiral: 12 months left until 2019!`);
     console.log(`[info] Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
-};
+    };
   config: {}
