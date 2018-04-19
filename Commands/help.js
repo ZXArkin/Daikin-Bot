@@ -15,7 +15,7 @@ msg.author.send({embed: {
       icon_url: client.user.avatarURL
     },
     title: `:robot: Main`,
-    description: `\`\`\`info \nping \ncredits \ninvite \nsupport \nfeature <your feature> \ndebug \`\`\``
+    description: `\`\`\`info \nping \ncredits \ninvite \nsupport \ndebug \`\`\``
 }
 });
 msg.author.send({embed: {
