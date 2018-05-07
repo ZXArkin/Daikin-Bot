@@ -1,40 +1,34 @@
-   const Discord = require("discord.js");
-
 exports.run = (client, msg, args) => {
-
-responses = [
-        "It is certain", 
-        "It is decidedly so",
-        "Without a doubt",
-        "Yes definitely",
-        "You may rely on it",
-        "As I see it, yes",
-        "Most likely",
-        "Outlook good",
-        "Yes",
-        "Signs point to yes",
-        "Reply hazy try again", 
-        "Ask again later",
-        "Better not tell you now",
-        "Cannot predict now",
-        "Concentrate and ask again",
-        "Don't count on it", 
-        "My reply is no",
-        "My sources say no",
-        "Outlook not so good",
-        "Very doubtful",
-        "Why?",
-        "You shouldn't know",
-        "You should know",
-    ];
-
-    if (args.length < 1) return msg.reply(":no_entry: **You need to ask something to the 8ball!**");
-
-
-    let embed = new Discord.RichEmbed()
-    .setTitle(":8ball: The 8ball replied:")
-    .setColor("#00ff00")
-    .setDescription((responses[Math.floor(Math.random() * responses.length)]))
-    msg.channel.send(embed);
-}
-  config: {}
+    let question = args.join(" ");
+    var replies = [
+        `Yes`,
+        `My reply is no`,
+        `Outlook not so good`,
+        `Most likely`,
+        `Without a doubt`,
+        `Very doubtful`,
+        `It is decidedly so`,
+        `Don't count on it`,
+        `Outlook good`,
+        `Better not tell you now`,
+        `Concetrate and ask again`
+    ]
+    var magic8ball = replies[Math.floor(Math.random() * replies.length)];
+    msg.channel.send({embed: {
+            color: 0x194596,
+            author: {
+                name: `${client.user.username}`,
+                icon_url: client.user.avatarURL
+            },
+            title: `The :8ball: replied with:`,
+            description: `\`\`\`${magic8ball.toString()}\`\`\``,
+            timestamp: new Date(),
+            footer: {
+                icon_url: msg.author.avatarURL,
+                text: `Requested by ${msg.author.tag}`
+            }
+        }
+    });
+    console.log(`[info] Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
+};
+config: {}
