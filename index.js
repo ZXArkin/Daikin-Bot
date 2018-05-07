@@ -1,24 +1,32 @@
 const fs = require("fs");
 
+var userData = JSON.parse(fs.readFileSync("./userData.json", "utf8"));
+
 const Discord = require("discord.js");
+const random = require("random-animal");
+const weather = require("weather-js");
 const client = new Discord.Client();
 const config = require("./Configuration/auth.json");
+const embed = new Discord.RichEmbed();
 
-client.on('ready', () => { 	
-    console.log(`[info] Successfully logged in as ${client.user.tag}!`);
-    console.log(`[info] Serving in ${client.guilds.size} servers, with ${client.users.size} users on ${client.channels.size} channels`)
-    console.log(`[info] Type s%help for a list of commands!`)
-    client.user.setGame(`sapphirebot.cf`, `stream link`);
+client.on('ready', () => {  
+    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`Serving in ${client.guilds.size} servers, with ${client.users.size} users on ${client.channels.size} channels`)
+    client.user.setStatus(`online`)
+    client.user.setActivity(`Type !help | v1.1`,  { type: 'PLAYING' });
 });
 
+fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
+if (err) console.log(err);
+})
+
 client.on("guildCreate", guild => {
-  console.log(`[serverJoin] [${client.guilds.size} guilds] ${client.user.username} just joined ${guild.name}! It has ${guild.memberCount} members`);
+  console.log(`I've been added to ${guild.name}. I am in ${client.guilds.size} servers now!`);
 });
 
 client.on("guildDelete", guild => {
-  console.log(`[serverLeave] [${client.guilds.size} guilds] Well, this is awkward. ${client.user.username} just got kicked from ${guild.name}. It had ${guild.memberCount} members`);
+  console.log(`I've left: ${guild.name}. This could've been because I was kicked, banned, or the server was deleted.`);
 });
-
 
 client.on("message", msg => {
     if (msg.author.bot) return;

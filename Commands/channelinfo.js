@@ -1,28 +1,26 @@
 const Discord = require("discord.js");
 
 exports.run = (client, msg, args) => {
+
 msg.channel.send({embed: {
     color: 0xd45555,
-    title: `:bust_in_silhouette: User information:`,
-    thumbnail: {
-      url: msg.author.avatarURL
-       },
+    title: `:hash: Channel information:`,
       fields: [{
-        name: "Username & Discriminator",
-        value: `@**${msg.author.tag}**`
+        name: "Name",
+        value: `${msg.channel.name}`
       },
-      {
+          {
         name: "Created",
-        value: `${msg.author.createdAt}`
+        value: `${msg.channel.createdAt}`
       },
       {
-        name: "Bot?",
-        value: `${msg.author.bot}`,
+        name: "Channel Type",
+        value: `${msg.channel.type}`,
         inline: true
       },
       {
         name: ":id:",
-        value: `${msg.author.id}`,
+        value: `${msg.channel.id}`,
         inline: true
       },
     ],

@@ -1,23 +1,28 @@
+const Discord = require("discord.js");
+
 exports.run = (client, msg, args) => {
-msg.channel.send({embed: {
-    color: 0x194596,
-    author: {
-      name: client.user.username + " Credits",
-      icon_url: client.user.avatarURL
-    },
-    description: "Author of the bot: **ZXByte#8075**",
-      fields: [{
-        name: ":tools: Contribuitors",
-        value: "There are no contribuitors for this bot. If you want to be on this list just contribute to this bot on GitHub."
-      },
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: msg.author.avatarURL,
-      text: `Requested by ${msg.author.tag}`
+
+    msg.channel.send({embed: {
+        color: 0xd45555,
+        author: {
+          name: "Melon",
+          icon_url: client.user.avatarURL
+        },
+        description: `:hammer: **Project Lead**: BriciWorld#1434`,
+        fields: [{
+            name: "APIs",
+            value: `[Random Cat](http://random.cat) \n[Random Dog](http://random.dog)`,
+           inline: true
+          },
+          {
+            name: "Developers",
+            value: `Casbas 234#5853 and Hydrogen#0002`,
+            inline: true
+          },
+        ],
         }
-    }
-});
-console.log(`[info] Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
+    });
+    console.log(`Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
+ 
 };
   config: {}

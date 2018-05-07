@@ -1,21 +1,20 @@
+const Discord = require("discord.js");
+
 exports.run = (client, msg, args) => {
-    let question = args.join(" ");
-    var dies = [
-        `Oh, shocking. :one:`,
-        `Eh... :two:`,
-        `Okay. :three:`,
-        `Hey! :four:`,
-        `Pretty good. :five:`,
-        `Noice. :six:`,
-        `Sexy. :seven:`
-    ]
-    var roll = dies[Math.floor(Math.random() * dies.length)];
-    msg.channel.send({embed: {
-            color: 0x194596,
-            title: `:game_die: The die rolls...`,
-            description: `${roll.toString()}`
-        }
-    });
-    console.log(`[info] Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
-};
-config: {}
+
+responses = [
+        "1", 
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+    ];
+
+    let embed = new Discord.RichEmbed()
+    .setTitle(":game_die: The roll dies...")
+    .setColor("#00ff00")
+    .setDescription(`The roll shows **${(responses[Math.floor(Math.random() * responses.length)])}**`)
+    msg.channel.send(embed);
+}
+  config: {}

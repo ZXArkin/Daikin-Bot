@@ -1,19 +1,27 @@
-exports.run = (client, msg, args) =>
-    msg.channel.send({embed: {
-            color: 0x194596,
-            author: {
-                name: client.user.username,
-                icon_url: client.user.avatarURL
+exports.run = (client, msg, args) => {
+    const user = msg.mentions.users.first()
+    
+    if(user) {
+        msg.channel.send({embed: {
+        color: 0x00ff00,
+            title: `:frame_photo: ${user.username}'s Avatar`,
+            description: `Image isn't loading? [Click here](${user.avatarURL})`,
+            image: {
+                url: user.avatarURL
             },
-            title: `:frame_photo: ${msg.author.username}'s avatar!`,
+            }
+        });
+    } else {
+    msg.channel.send({embed: {
+        color: 0x00ff00,
+            title: `:frame_photo: Your Avatar`,
+            description: `Image isn't loading? [Click here](${msg.author.avatarURL})`,
             image: {
                 url: msg.author.avatarURL
             },
-            timestamp: new Date(),
-            footer: {
-                icon_url: msg.author.avatarURL,
-                text: `Requested by ${msg.author.tag}`
             }
-        }
-    });
+        });
+    }
+    console.log(`Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
+    };
   config: {}
