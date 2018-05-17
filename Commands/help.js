@@ -5,9 +5,7 @@ exports.run = (client, msg, args) => {
           name: `${client.user.username}`,
           icon_url: client.user.avatarURL
         },
-        description: `You can use these commands in **${msg.guild.name}** with the prefix \`%\`.
-Contact \`BriciWorld#1434\` if you need any help using the bot.
-You can also join [Sapphire's Home](https://discord.gg/DqGgueq) for help.`
+        description: `You can use these commands in **${msg.guild.name}** with the prefix \`!\`.`
     }
     });
 msg.author.send({embed: {
