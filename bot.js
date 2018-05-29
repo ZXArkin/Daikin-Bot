@@ -7,8 +7,8 @@ const config = require("./Configuration/auth.json");
 client.on('ready', () => { 	
     console.log(`[info] Successfully logged in as ${client.user.tag}!`);
     console.log(`[info] Serving in ${client.guilds.size} servers, with ${client.users.size} users on ${client.channels.size} channels`)
-    console.log(`[info] Type !help for a list of commands!`)
-    client.user.setActivity("with Reimu ^_^", { type: `PLAYING`});
+    console.log(`[info] Type zx!help for a list of commands!`)
+    client.user.setActivity("Type zx!help to help!", { type: `PLAYING`});
 });
 
 client.on("guildCreate", guild => {
