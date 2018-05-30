@@ -14,4 +14,4 @@ This bot has the following features as of now:
 This bot will improve even more in the future, including music and strike system commands
 
 # Final Notes
-I am not allowing anyone to self-host their own copy. If you really want to use Sapphire, then add it using the link above. However, you can still use some code from here.
+I am not allowing anyone to self-host their own copy. If you really want to use ZXBot, then add it using the link above. However, you can still use some code from here.
