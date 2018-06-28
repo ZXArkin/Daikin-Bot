@@ -1,0 +1,27 @@
+{
+  "name": "zxbot-v2",
+  "version": "1.0.0",
+  "description": "A bot that does moderation, utility, and fun",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "nodemon": "^1.17.4",
+    "random-animal": "^1.0.7",
+    "snekfetch": "^4.0.0",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reimu2001/ZXBot-V2.git"
+  },
+  "author": "ZXByte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Reimu2001/ZXBot-V2/issues"
+  },
+  "homepage": "https://github.com/Reimu2001/ZXBot-V2#readme"
+}
