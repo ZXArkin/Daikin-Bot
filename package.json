@@ -5,6 +5,7 @@
   "main": "bot.js",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "moment": "^2.22.2",
     "nodemon": "^1.17.4",
     "random-animal": "^1.0.7",
     "snekfetch": "^4.0.0",
