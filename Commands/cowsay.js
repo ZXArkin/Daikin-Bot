@@ -4,5 +4,5 @@ exports.run = (client, msg, args) => {
 	msg.channel.send("```" + cowsay.say({
 		text : text
 	}) + "```")
-	}
-	config: {}
+}
+config: {}
