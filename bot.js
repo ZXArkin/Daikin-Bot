@@ -10,6 +10,7 @@ client.on('ready', () => {
     console.log(`[info] Serving in ${client.guilds.size} servers, with ${client.users.size} users on ${client.channels.size} channels`)
     console.log(`[info] Type zx!help for a list of commands!`)
     client.user.setActivity("Type zx!help to help!", { type: `PLAYING`});
+    client.user.setStatus('dnd') //Status: "Online", "Idle", "Invisible" & "DnD"
 });
 
 client.on("guildCreate", guild => {
@@ -19,8 +20,6 @@ client.on("guildCreate", guild => {
 client.on("guildDelete", guild => {
   console.log(`[serverLeave] [${client.guilds.size} guilds] Well, this is awkward. ${client.user.username} just got kicked from ${guild.name}. It had ${guild.memberCount} members`);
 });
-
-bot.user.setStatus('dnd') //Status: "Online", "Idle", "Invisible" & "DnD"
 
 client.on("message", msg => {
     if (msg.author.bot) return;
