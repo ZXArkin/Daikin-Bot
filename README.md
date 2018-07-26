@@ -17,7 +17,7 @@ This bot will improve even more in the future, including music and strike system
 Wanna invite this bot to your server? Use this link: https://discordapp.com/oauth2/authorize?&client_id=428549193590767627&scope=bot&permissions=-1
 
 # Support
-If you need help with this bot, join the support server: https://discord.gg/3M7sJtY (ZXLuka - ZXBot Support).
+If you need help with this bot, join the support server: https://discord.gg/3M7sJtY (ZXLounge - ZXBot Support).
 
 # Final Notes
 I am not allowing anyone to self-host their own copy. If you really want to use ZXBot, then add it using the link above. However, you can still use some code from here.
