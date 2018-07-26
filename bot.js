@@ -20,6 +20,7 @@ client.on("guildDelete", guild => {
   console.log(`[serverLeave] [${client.guilds.size} guilds] Well, this is awkward. ${client.user.username} just got kicked from ${guild.name}. It had ${guild.memberCount} members`);
 });
 
+bot.user.setStatus('dnd') //Status: "Online", "Idle", "Invisible" & "DnD"
 
 client.on("message", msg => {
     if (msg.author.bot) return;
