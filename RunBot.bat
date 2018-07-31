@@ -1,3 +1,2 @@
-@echo off
-echo Starting Sapphire
+echo Starting ZXBot...
 node bot.js
