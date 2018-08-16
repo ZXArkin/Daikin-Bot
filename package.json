@@ -9,6 +9,7 @@
     "moment": "^2.22.2",
     "nodemon": "^1.17.4",
     "random-animal": "^1.0.7",
+    "request": "^2.88.0",
     "snekfetch": "^4.0.0",
     "weather-js": "^2.0.0"
   },
