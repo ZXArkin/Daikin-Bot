@@ -14,7 +14,7 @@ This bot has the following features as of now:
 This bot will improve even more in the future, including music and strike system commands.
 
 # Bot Invite Link
-Wanna invite this bot to your server? Use this link: https://discordapp.com/oauth2/authorize?&client_id=428549193590767627&scope=bot&permissions=-1
+Wanna invite this bot to your server? Use this link: https://discordapp.com/oauth2/authorize?&client_id=479547730075713547&scope=bot&permissions=-1
 
 # Support
 If you need help with this bot, join the support server: https://discord.io/Daikin (Daikin Server Official).
