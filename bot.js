@@ -9,7 +9,7 @@ client.on('ready', () => {
     console.log(`[info] Successfully logged in as ${client.user.tag}!`);
     console.log(`[info] Serving in ${client.guilds.size} servers, with ${client.users.size} users on ${client.channels.size} channels`)
     console.log(`[info] Type d!help for a list of commands!`)
-    client.user.setActivity("Type zx!help to help!", { type: `PLAYING`,});
+    client.user.setActivity("Type d!help to help!", { type: `PLAYING`,});
     client.user.setStatus("online"); //Status: "Online", "idle", "Invisible" & "DnD".
 });
 
