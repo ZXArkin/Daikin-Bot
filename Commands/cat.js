@@ -1,7 +1,7 @@
 exports.run = async (client, msg, args) => {
-    const snekfetch = require("snekfetch");
-    const { body } = await snekfetch    
-        .get('http://aws.random.cat/meow');
+    const superagent = require("superagent");
+    const { body } = await superagent
+        .get('http://random.cat/meow');
     msg.channel.send({embed: {
             color: 0x194596,
             author: {
