@@ -1,6 +1,6 @@
 exports.run = (client, msg, args) => {
-    if(!msg.member.roles.some(r=>["Sapphire Mod"].includes(r.name)) )
-    return msg.channel.send(`:x: You need **Sapphire Mod** role in order to use this command!
+    if(!msg.member.roles.some(r=>["Moderator"].includes(r.name)) )
+    return msg.channel.send(`:x: You need **Moderator** role in order to use this command!
 SappWarn code: 0x0020`);
     let thing = args.join(" ");
     msg.delete();

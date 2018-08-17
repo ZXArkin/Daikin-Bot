@@ -8,10 +8,10 @@ exports.run = (client, msg, args) => {
         var hours = Math.floor(seconds / (60*60));
         var minutes = Math.floor(seconds % (60*60) / 60);
         var seconds = Math.floor(seconds % 60);
-      
+
         return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
       }
-      
+
       var uptime = process.uptime();
 
     msg.channel.send({embed: {
@@ -20,7 +20,7 @@ exports.run = (client, msg, args) => {
           name: client.user.username,
           icon_url: client.user.avatarURL
         },
-        description: `${client.user.username} - A Discord bot for the new age which does anything you want`,
+        description: `${client.user.username} - A powerful discord whatever you want.`,
         fields: [{
             name: "Author",
             value: `ZXByte#8075`,
@@ -68,7 +68,7 @@ exports.run = (client, msg, args) => {
           },
           {
             name: "Support Server",
-            value: `[Join](https://discord.gg/xqqYmKh)`,
+            value: `[Join](https://discord.gg/p2Pxes7)`,
             inline: true
           },
         ],

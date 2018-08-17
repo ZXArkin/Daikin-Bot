@@ -5,9 +5,7 @@ exports.run = (client, msg, args) => {
           name: `${client.user.username}`,
           icon_url: client.user.avatarURL
         },
-        description: `You can use these commands in **${msg.guild.name}** with the prefix \`%\`.
-Contact \`BriciWorld#1434\` if you need any help using the bot.
-You can also join [Sapphire's Home](https://discord.gg/DqGgueq) for help.`
+        description: `You can use these commands in **${msg.guild.name}** with the prefix \`d!\`.`
     }
     });
 msg.author.send({embed: {
@@ -17,7 +15,7 @@ msg.author.send({embed: {
       icon_url: client.user.avatarURL
     },
     title: `:robot: Main`,
-    description: `\`\`\`info \nping \ncredits \ninvite \nsupport \nfeature <your feature> \ndebug \`\`\``
+    description: `\`\`\`info \nping \ncredits \ninvite \ndebug \`\`\``
 }
 });
 msg.author.send({embed: {
@@ -54,4 +52,4 @@ msg.author.send({embed: {
      console.log(`[info] Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
   };
       config: {}
-    
+

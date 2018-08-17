@@ -11,14 +11,14 @@ exports.run = (client, msg, args) => {
           },
               {
             name: ":computer: Hosting in",
-            value: `**BriciWorld**'s PC`
+            value: `**ZXByte**'s PC`
           },
           {
             name: ":robot: 24/7/365?",
             value: `No.`
           },
           {
-            name: ":bar_chart: Used RAM (by Sapphire)",
+            name: ":bar_chart: Used RAM (by ZXByte)",
             value: `NaN of NaN RAM`
           },
         ],
@@ -31,4 +31,4 @@ exports.run = (client, msg, args) => {
     console.log(`[info] Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
     };
       config: {}
-    
+
