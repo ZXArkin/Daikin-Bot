@@ -1,14 +1,14 @@
 const fs = require("fs");
 
 const Discord = require("discord.js");
-const cowsay = require("cowsay"); 
+const cowsay = require("cowsay");
 const client = new Discord.Client();
 const config = require("./Configuration/auth.json");
 
-client.on('ready', () => { 	
+client.on('ready', () => {
     console.log(`[info] Successfully logged in as ${client.user.tag}!`);
     console.log(`[info] Serving in ${client.guilds.size} servers, with ${client.users.size} users on ${client.channels.size} channels`)
-    console.log(`[info] Type zx!help for a list of commands!`)
+    console.log(`[info] Type d!help for a list of commands!`)
     client.user.setActivity("Type zx!help to help!", { type: `PLAYING`,});
     client.user.setStatus("online"); //Status: "Online", "idle", "Invisible" & "DnD".
 });
@@ -25,10 +25,10 @@ client.on("guildDelete", guild => {
 client.on("message", msg => {
     if (msg.author.bot) return;
     if(msg.content.indexOf(config.prefix) !== 0) return;
-  
+
     const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-  
+
     try {
       let commandFile = require(`./Commands/${command}.js`);
       commandFile.run(client, msg, args);
