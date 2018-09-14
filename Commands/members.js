@@ -1,11 +1,9 @@
-const rf = require('random-facts');
-
 exports.run = (client, msg, args) => {
      
     msg.channel.send({embed: {
-        color: 0x00ff00,
-        title: `:dolphin: Alright, here's your fun fact`,
-        description: rf.randomFact(),
+        color: 0xDCA741,
+        title: `:desktop: This server has...`,
+        description: msg.guild.memberCount + " members.",
         }
     });
     console.log(`Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);

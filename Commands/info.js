@@ -1,49 +1,22 @@
 const Discord = require("discord.js");
 
 exports.run = (client, msg, args) => {
-    function format(seconds){
-        function pad(s){
-          return (s < 10 ? '0' : '') + s;
-        }
-        var hours = Math.floor(seconds / (60*60));
-        var minutes = Math.floor(seconds % (60*60) / 60);
-        var seconds = Math.floor(seconds % 60);
-
-        return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
-      }
-
-      var uptime = process.uptime();
 
     msg.channel.send({embed: {
-        color: 0x00ff00,
+        color: 0xDCA741,
         author: {
           name: client.user.username,
           icon_url: client.user.avatarURL
         },
-        description: `${client.user.username} - A powerful discord whatever you want.`,
+        description: `${client.user.username} - A Discord bot for the new age which does anything you want`,
         fields: [{
             name: "Author",
-            value: `ZXByte#8075`,
+            value: `BW Tech#1434`,
            inline: true
           },
           {
-            name: "Servers",
-            value: `${client.guilds.size}`,
-            inline: true
-          },
-          {
-            name: "Users",
-            value: `${client.users.size}`,
-            inline: true
-          },
-          {
-            name: "Channels",
-            value: `${client.channels.size}`,
-            inline: true
-          },
-          {
             name: "Bot version",
-            value: `v2.0`,
+            value: `v1.2.2`,
             inline: true
           },
           {
@@ -57,23 +30,18 @@ exports.run = (client, msg, args) => {
             inline: true
           },
           {
-            name: "Uptime",
-            value: `${format(uptime)}`,
-            inline: true
-          },
-          {
             name: "Memory Usage",
             value: (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + `MB`,
             inline: true
           },
           {
             name: "Support Server",
-            value: `[Join](https://discord.gg/p2Pxes7)`,
+            value: `[Join](https://discord.gg/5h86cH9)`,
             inline: true
           },
         ],
         footer: {
-          text: `All systems operational`
+          text: `Serving ${client.guilds.size} servers with ${client.users.size} users.`
             }
         }
     });

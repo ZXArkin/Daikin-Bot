@@ -2,9 +2,20 @@ exports.run = (client, msg, args) => {
 
     let game = args.join(" ")
 
-if(msg.author.id !== "") return msg.channel.send(`:x: **Are you stupid?** Only bot developers can use this command.`);
-client.user.setActivity(`${game}`)
-msg.channel.send(`:white_check_mark: Successfully set the Playing status to **${game}**.`)
- console.log(`[info] Treating ${msg.content} by ${msg.author.tag} from ${msg.guild} as a command.`);
-}
+   let maintainers = ["", "", ""]; 
+     if(!maintainers.includes(msg.author.id)) return msg.channel.send({embed: {
+        color: 0xff0000,
+         title: `:no_entry: Oops!`,
+            description: `You don't have permission to use this command. You need to be **Bot Developer** in order to use this command!`,
+            }
+        });
+        client.user.setActivity(`${game}`)
+        msg.channel.send({embed: {
+            color: 0x00ff00,
+            title: `:white_check_mark: Success!`,
+            description: `Changed game status to **${game}**`,
+            }
+        });
+    }
+
 config: {}
