@@ -1,23 +1,16 @@
-# Daikin Bot
-A bot that does moderation, utility, and fun
-
-### Feel free to contribute to this bot
+# Daikin
+A powerful Discord Bot everywhere you want.
 
 # Features
-This bot has the following features as of now:
-  * Facts
-  * Best informations
-  * Magic 8 Ball
-  * Fun
-  * Basic Moderation Commands
+Daikin is a Discord bot for the future which can do anything (what you want). Features including:
 
-This bot will improve even more in the future, including music and strike system commands.
+1. Games like Rock Paper Scissors and the slots
+2. Moderation (soon)
+3. Fun Stuff
+4. Weather
+5. Facts
 
-# Bot Invite Link
-Wanna invite this bot to your server? Use this link: https://discordapp.com/oauth2/authorize?&client_id=479547730075713547&scope=bot&permissions=-1
+# Invite
+Invite the bot using [this link](https://discordapp.com/oauth2/authorize?&client_id=479547730075713547&scope=bot&permissions=8). For help, you can join the server [here](https://discord.gg/6tVfRkq).
 
-# Support
-If you need help with this bot, join the support server: https://discord.io/Daikin (Daikin Server Official).
-
-# Final Notes
-I am not allowing anyone to self-host their own copy. If you really want to use Daikin, then add it using the link above. However, you can still use some code from here.
+The bot is 24/7 unless updates or other stuff are happening.
