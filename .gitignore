@@ -1,3 +1,5 @@
 node_mouldes/
 package-lock.json
 .idea/
+.vscode/
+package.json
